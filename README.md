@@ -5,4 +5,5 @@ The project include schematic and simulation states files,but layout will not be
 
 Enviroment:cadence icfb  
 Componets to be designed:Bandgap reference,LDO,OTA,OPA,filters.  
+All componets based on smic 0.13um crafts.
 
