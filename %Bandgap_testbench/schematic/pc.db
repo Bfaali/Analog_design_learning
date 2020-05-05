@@ -1,0 +1,22 @@
+#
+analogLib cap symbol
+C0
+#
+analogLib ind symbol
+L2
+L1
+L0
+#
+analogLib vdc symbol
+V2
+V1
+V0
+#
+Analog_design_learning Bandgap symbol
+I0
+#ISCELL
+analogLib gnd symbol
+I3
+I2
+I1
+I4
