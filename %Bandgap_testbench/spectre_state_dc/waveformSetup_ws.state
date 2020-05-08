@@ -11,24 +11,49 @@
           <Property NAME="dependentAxis">
             <JavaBean CLASS="COM.cadence.awd.graph.DepAxis">
               <Properties>
-                <Property NAME="baseUnit">V</Property>
-                <Property NAME="defaultTitle">V</Property>
+                <Property NAME="baseUnit">deg</Property>
                 <Property NAME="forceOrigin">False</Property>
                 <Property NAME="foregroundName">black</Property>
                 <Property NAME="logScale">False</Property>
-                <Property NAME="majDivisions">4</Property>
+                <Property NAME="majDivisions">0</Property>
                 <Property NAME="majGridsOn">True</Property>
-                <Property NAME="minDivisions">10</Property>
+                <Property NAME="minDivisions">0</Property>
                 <Property NAME="minGridsOn">True</Property>
                 <Property NAME="minorForegroundName">0x272727</Property>
                 <Property NAME="nameId">0</Property>
                 <Property NAME="scaleMode">1</Property>
                 <Property NAME="sigDigits">3</Property>
                 <Property NAME="sigDigitsDefault">True</Property>
-                <Property NAME="tempStripFlag">False</Property>
+                <Property NAME="tempStripFlag">True</Property>
+                <Property NAME="title">Y0</Property>
                 <Property NAME="useDefaultTitle">True</Property>
-                <Property NAME="userMax">1.3</Property>
-                <Property NAME="userMin">0.5</Property>
+                <Property NAME="userMax">200.0</Property>
+                <Property NAME="userMin">-50.0</Property>
+                <Property NAME="zoomState">False</Property>
+              </Properties>
+            </JavaBean>
+          </Property>
+          <Property NAME="dependentAxis">
+            <JavaBean CLASS="COM.cadence.awd.graph.DepAxis">
+              <Properties>
+                <Property NAME="baseUnit">dB</Property>
+                <Property NAME="forceOrigin">False</Property>
+                <Property NAME="foregroundName">black</Property>
+                <Property NAME="logScale">False</Property>
+                <Property NAME="majDivisions">0</Property>
+                <Property NAME="majGridsOn">True</Property>
+                <Property NAME="minDivisions">0</Property>
+                <Property NAME="minGridsOn">True</Property>
+                <Property NAME="minorForegroundName">0x272727</Property>
+                <Property NAME="nameId">1</Property>
+                <Property NAME="scaleMode">1</Property>
+                <Property NAME="sigDigits">3</Property>
+                <Property NAME="sigDigitsDefault">True</Property>
+                <Property NAME="tempStripFlag">True</Property>
+                <Property NAME="title">Y1</Property>
+                <Property NAME="useDefaultTitle">True</Property>
+                <Property NAME="userMax">70.0</Property>
+                <Property NAME="userMin">-20.0</Property>
                 <Property NAME="zoomState">False</Property>
               </Properties>
             </JavaBean>
@@ -46,11 +71,11 @@
           <Property NAME="independentAxis">
             <JavaBean CLASS="COM.cadence.awd.graph.IndepAxis">
               <Properties>
-                <Property NAME="baseUnit">C</Property>
-                <Property NAME="defaultTitle">temp</Property>
+                <Property NAME="baseUnit">Hz</Property>
+                <Property NAME="defaultTitle">freq</Property>
                 <Property NAME="forceOrigin">False</Property>
                 <Property NAME="foregroundName">black</Property>
-                <Property NAME="logScale">False</Property>
+                <Property NAME="logScale">True</Property>
                 <Property NAME="majDivisions">4</Property>
                 <Property NAME="majGridsOn">True</Property>
                 <Property NAME="minDivisions">10</Property>
@@ -61,8 +86,8 @@
                 <Property NAME="sigDigits">3</Property>
                 <Property NAME="sigDigitsDefault">True</Property>
                 <Property NAME="useDefaultTitle">True</Property>
-                <Property NAME="userMax">100.0</Property>
-                <Property NAME="userMin">-50.0</Property>
+                <Property NAME="userMax">1.0E7</Property>
+                <Property NAME="userMin">10.0</Property>
                 <Property NAME="zoomState">False</Property>
               </Properties>
             </JavaBean>
@@ -73,44 +98,42 @@
           <Property NAME="minorGridsOn">True</Property>
           <Property NAME="nameId">-1</Property>
           <Property NAME="peakSnapOn">False</Property>
-          <Property NAME="runVarName">temp</Property>
-          <Property NAME="stripChartOn">False</Property>
+          <Property NAME="runVarName">freq</Property>
+          <Property NAME="stripChartOn">True</Property>
           <Property NAME="subTitle"></Property>
-          <Property NAME="title">DC Response</Property>
+          <Property NAME="title">Stability Response</Property>
           <Property NAME="trace">
             <JavaBean CLASS="COM.cadence.awd.graph.RectTrace">
               <Properties>
-                <Property NAME="dataSetName">dc-dc</Property>
-                <Property NAME="defaultTitle">/VBG</Property>
+                <Property NAME="defaultTitle">phaseDegUnwrapped(getData("loopGain" ?result "stb"))</Property>
                 <Property NAME="defaultTitleOn">False</Property>
                 <Property NAME="depAxisId">0</Property>
-                <Property NAME="depUnit">V</Property>
+                <Property NAME="depUnit">deg</Property>
                 <Property NAME="directoryName">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                <Property NAME="eyeEnd">85.0</Property>
-                <Property NAME="eyeInterval">125.0</Property>
+                <Property NAME="eyeEnd">1.0E7</Property>
+                <Property NAME="eyeInterval">9999990.0</Property>
                 <Property NAME="eyeMode">False</Property>
-                <Property NAME="eyeStart">-40.0</Property>
-                <Property NAME="foregroundName">0xcc66</Property>
+                <Property NAME="eyeStart">10.0</Property>
+                <Property NAME="foregroundName">0xd9e6ff</Property>
                 <Property NAME="indepAxisId">0</Property>
-                <Property NAME="indepUnit">C</Property>
-                <Property NAME="name">v /VBG; dc (V)</Property>
+                <Property NAME="indepUnit">Hz</Property>
+                <Property NAME="name">Loop Gain Phase</Property>
                 <Property NAME="nameId">0</Property>
                 <Property NAME="stripIndex">0</Property>
                 <Property NAME="symbolCount">20</Property>
-                <Property NAME="symbolStyle">9</Property>
+                <Property NAME="symbolStyle">14</Property>
                 <Property NAME="symbolsOnFlag">False</Property>
-                <Property NAME="title">v /VBG; dc (V)</Property>
+                <Property NAME="title">Loop Gain Phase</Property>
                 <Property NAME="traceStyle">36</Property>
                 <Property NAME="traceToken">
                   <JavaBean CLASS="COM.cadence.awd.graph.TraceToken">
                     <Properties>
                       <Property NAME="compound">False</Property>
-                      <Property NAME="convertedName">VBG</Property>
+                      <Property NAME="convertedName">phaseDegUnwrapped(getData("loopGain"::SPC::?result::SPC::"stb"))</Property>
                       <Property NAME="dataDirectory">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                      <Property NAME="dataSet">dc-dc</Property>
                       <Property NAME="index">0</Property>
-                      <Property NAME="name">VBG</Property>
-                      <Property NAME="type">SIGNAL</Property>
+                      <Property NAME="name">phaseDegUnwrapped(getData("loopGain" ?result "stb"))</Property>
+                      <Property NAME="type">EXPRESSION</Property>
                     </Properties>
                   </JavaBean>
                 </Property>
@@ -118,7 +141,7 @@
                 <Property NAME="zoomAgent">
                   <JavaBean CLASS="COM.cadence.awd.graph.ZoomAgent">
                     <Properties>
-                      <Property NAME="traceId">trc:2816245.16</Property>
+                      <Property NAME="traceId">trc:33320685.64</Property>
                     </Properties>
                   </JavaBean>
                 </Property>
@@ -128,37 +151,35 @@
           <Property NAME="trace">
             <JavaBean CLASS="COM.cadence.awd.graph.RectTrace">
               <Properties>
-                <Property NAME="dataSetName">dc-dc</Property>
-                <Property NAME="defaultTitle">/I0/net025</Property>
+                <Property NAME="defaultTitle">db(mag(getData("loopGain" ?result "stb")))</Property>
                 <Property NAME="defaultTitleOn">False</Property>
-                <Property NAME="depAxisId">0</Property>
-                <Property NAME="depUnit">V</Property>
+                <Property NAME="depAxisId">1</Property>
+                <Property NAME="depUnit">dB</Property>
                 <Property NAME="directoryName">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                <Property NAME="eyeEnd">85.0</Property>
-                <Property NAME="eyeInterval">125.0</Property>
+                <Property NAME="eyeEnd">1.0E7</Property>
+                <Property NAME="eyeInterval">9999990.0</Property>
                 <Property NAME="eyeMode">False</Property>
-                <Property NAME="eyeStart">-40.0</Property>
-                <Property NAME="foregroundName">magenta</Property>
+                <Property NAME="eyeStart">10.0</Property>
+                <Property NAME="foregroundName">red</Property>
                 <Property NAME="indepAxisId">0</Property>
-                <Property NAME="indepUnit">C</Property>
-                <Property NAME="name">v /I0/net025; dc (V)</Property>
+                <Property NAME="indepUnit">Hz</Property>
+                <Property NAME="name">Loop Gain dB20</Property>
                 <Property NAME="nameId">1</Property>
                 <Property NAME="stripIndex">1</Property>
                 <Property NAME="symbolCount">20</Property>
                 <Property NAME="symbolStyle">14</Property>
                 <Property NAME="symbolsOnFlag">False</Property>
-                <Property NAME="title">v /I0/net025; dc (V)</Property>
+                <Property NAME="title">Loop Gain dB20</Property>
                 <Property NAME="traceStyle">36</Property>
                 <Property NAME="traceToken">
                   <JavaBean CLASS="COM.cadence.awd.graph.TraceToken">
                     <Properties>
                       <Property NAME="compound">False</Property>
-                      <Property NAME="convertedName">I0.net025</Property>
+                      <Property NAME="convertedName">db(mag(getData("loopGain"::SPC::?result::SPC::"stb")))</Property>
                       <Property NAME="dataDirectory">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                      <Property NAME="dataSet">dc-dc</Property>
                       <Property NAME="index">0</Property>
-                      <Property NAME="name">I0.net025</Property>
-                      <Property NAME="type">SIGNAL</Property>
+                      <Property NAME="name">db(mag(getData("loopGain" ?result "stb")))</Property>
+                      <Property NAME="type">EXPRESSION</Property>
                     </Properties>
                   </JavaBean>
                 </Property>
@@ -166,103 +187,7 @@
                 <Property NAME="zoomAgent">
                   <JavaBean CLASS="COM.cadence.awd.graph.ZoomAgent">
                     <Properties>
-                      <Property NAME="traceId">trc:22736969.18</Property>
-                    </Properties>
-                  </JavaBean>
-                </Property>
-              </Properties>
-            </JavaBean>
-          </Property>
-          <Property NAME="trace">
-            <JavaBean CLASS="COM.cadence.awd.graph.RectTrace">
-              <Properties>
-                <Property NAME="dataSetName">dc-dc</Property>
-                <Property NAME="defaultTitle">/I0/INN</Property>
-                <Property NAME="defaultTitleOn">False</Property>
-                <Property NAME="depAxisId">0</Property>
-                <Property NAME="depUnit">V</Property>
-                <Property NAME="directoryName">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                <Property NAME="eyeEnd">85.0</Property>
-                <Property NAME="eyeInterval">125.0</Property>
-                <Property NAME="eyeMode">False</Property>
-                <Property NAME="eyeStart">-40.0</Property>
-                <Property NAME="foregroundName">cyan</Property>
-                <Property NAME="indepAxisId">0</Property>
-                <Property NAME="indepUnit">C</Property>
-                <Property NAME="name">v /I0/INN; dc (V)</Property>
-                <Property NAME="nameId">2</Property>
-                <Property NAME="stripIndex">2</Property>
-                <Property NAME="symbolCount">20</Property>
-                <Property NAME="symbolStyle">8</Property>
-                <Property NAME="symbolsOnFlag">False</Property>
-                <Property NAME="title">v /I0/INN; dc (V)</Property>
-                <Property NAME="traceStyle">36</Property>
-                <Property NAME="traceToken">
-                  <JavaBean CLASS="COM.cadence.awd.graph.TraceToken">
-                    <Properties>
-                      <Property NAME="compound">False</Property>
-                      <Property NAME="convertedName">I0.INN</Property>
-                      <Property NAME="dataDirectory">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                      <Property NAME="dataSet">dc-dc</Property>
-                      <Property NAME="index">0</Property>
-                      <Property NAME="name">I0.INN</Property>
-                      <Property NAME="type">SIGNAL</Property>
-                    </Properties>
-                  </JavaBean>
-                </Property>
-                <Property NAME="traceType">31</Property>
-                <Property NAME="zoomAgent">
-                  <JavaBean CLASS="COM.cadence.awd.graph.ZoomAgent">
-                    <Properties>
-                      <Property NAME="traceId">trc:26708275.19</Property>
-                    </Properties>
-                  </JavaBean>
-                </Property>
-              </Properties>
-            </JavaBean>
-          </Property>
-          <Property NAME="trace">
-            <JavaBean CLASS="COM.cadence.awd.graph.RectTrace">
-              <Properties>
-                <Property NAME="dataSetName">dc-dc</Property>
-                <Property NAME="defaultTitle">/I0/INP</Property>
-                <Property NAME="defaultTitleOn">False</Property>
-                <Property NAME="depAxisId">0</Property>
-                <Property NAME="depUnit">V</Property>
-                <Property NAME="directoryName">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                <Property NAME="eyeEnd">85.0</Property>
-                <Property NAME="eyeInterval">125.0</Property>
-                <Property NAME="eyeMode">False</Property>
-                <Property NAME="eyeStart">-40.0</Property>
-                <Property NAME="foregroundName">0x9900e6</Property>
-                <Property NAME="indepAxisId">0</Property>
-                <Property NAME="indepUnit">C</Property>
-                <Property NAME="name">v /I0/INP; dc (V)</Property>
-                <Property NAME="nameId">3</Property>
-                <Property NAME="stripIndex">3</Property>
-                <Property NAME="symbolCount">20</Property>
-                <Property NAME="symbolStyle">15</Property>
-                <Property NAME="symbolsOnFlag">False</Property>
-                <Property NAME="title">v /I0/INP; dc (V)</Property>
-                <Property NAME="traceStyle">36</Property>
-                <Property NAME="traceToken">
-                  <JavaBean CLASS="COM.cadence.awd.graph.TraceToken">
-                    <Properties>
-                      <Property NAME="compound">False</Property>
-                      <Property NAME="convertedName">I0.INP</Property>
-                      <Property NAME="dataDirectory">/root/simulation/Bandgap_testbench/spectre/schematic/psf</Property>
-                      <Property NAME="dataSet">dc-dc</Property>
-                      <Property NAME="index">0</Property>
-                      <Property NAME="name">I0.INP</Property>
-                      <Property NAME="type">SIGNAL</Property>
-                    </Properties>
-                  </JavaBean>
-                </Property>
-                <Property NAME="traceType">31</Property>
-                <Property NAME="zoomAgent">
-                  <JavaBean CLASS="COM.cadence.awd.graph.ZoomAgent">
-                    <Properties>
-                      <Property NAME="traceId">trc:14949706.20</Property>
+                      <Property NAME="traceId">trc:2568172.66</Property>
                     </Properties>
                   </JavaBean>
                 </Property>
@@ -277,12 +202,12 @@
           <Property NAME="zoomManager">
             <JavaBean CLASS="COM.cadence.awd.graph.ZoomManager">
               <Properties>
-                <Property NAME="xStartMax">100.0</Property>
-                <Property NAME="xStartMin">-50.0</Property>
-                <Property NAME="yStartMax">1.3</Property>
-                <Property NAME="yStartMin">0.5</Property>
-                <Property NAME="zoomRow">-1</Property>
-                <Property NAME="zoomType">13</Property>
+                <Property NAME="xStartMax">0.0</Property>
+                <Property NAME="xStartMin">0.0</Property>
+                <Property NAME="yStartMax">0.0</Property>
+                <Property NAME="yStartMin">0.0</Property>
+                <Property NAME="zoomRow">0</Property>
+                <Property NAME="zoomType">0</Property>
               </Properties>
             </JavaBean>
           </Property>
@@ -290,12 +215,12 @@
         </Properties>
       </JavaBean>
     </Property>
-    <Property NAME="height">782</Property>
+    <Property NAME="height">734</Property>
     <Property NAME="labelText"></Property>
-    <Property NAME="stripChartState">False</Property>
-    <Property NAME="width">1169</Property>
-    <Property NAME="xLocation">-10</Property>
-    <Property NAME="yLocation">145</Property>
+    <Property NAME="stripChartState">True</Property>
+    <Property NAME="width">798</Property>
+    <Property NAME="xLocation">290</Property>
+    <Property NAME="yLocation">191</Property>
   </Properties>
 </JavaBean>
 

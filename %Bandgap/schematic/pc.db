@@ -1,4 +1,10 @@
 #
+smic13mmrf_1233 mim3_ckt symbol
+C0
+#
+analogLib iprobe symbol
+IPRB0
+#
 smic13mmrf_1233 n33 symbol
 M26
 M25
