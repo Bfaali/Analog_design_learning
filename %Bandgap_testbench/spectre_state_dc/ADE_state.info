@@ -1,0 +1,3 @@
+projectDir = '"~/simulation"
+designInfo = '("Analog_design_learning" "Bandgap_testbench" "schematic" "spectre")
+descriptionText = "None"
