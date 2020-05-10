@@ -1,4 +1,7 @@
 #
+analogLib res symbol
+R0
+#
 analogLib cap symbol
 C0
 #
@@ -8,8 +11,8 @@ L1
 L0
 #
 analogLib vdc symbol
+V3
 V2
-V1
 V0
 #
 Analog_design_learning Bandgap symbol
