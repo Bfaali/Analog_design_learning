@@ -1,0 +1,46 @@
+#
+smic13mmrf_1233 rhrpo_3t_ckt symbol
+R0
+#
+smic13mmrf_1233 n33 symbol
+M3
+M2
+M30
+M20
+M19
+M32
+M17
+M16
+M28
+M26
+M27
+M7
+M25
+#
+smic13mmrf_1233 p33 symbol
+M33
+M31
+M21
+M29
+M14
+M23
+M22
+M24
+M5
+M4
+M1
+M0
+#ISCELL
+basic iopin symbolr
+PIN7
+PIN2
+PIN0
+#ISCELL
+basic opin symbol
+PIN1
+#ISCELL
+basic ipin symbol
+PIN6
+PIN5
+PIN4
+PIN3
