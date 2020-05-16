@@ -29,20 +29,20 @@ analysis(dc fields stepTypeLin) "Step Size"
 analysis(dc fields incrType) "Automatic"
 analysis(dc fields span) ""
 analysis(dc fields center) ""
-analysis(dc fields stop) "85"
-analysis(dc fields start) "-40"
+analysis(dc fields stop) "3"
+analysis(dc fields start) "0"
 analysis(dc fields sweepChange) nil
 analysis(dc fields rangeType) "Start-Stop"
-analysis(dc fields param) "temp"
-analysis(dc fields designVar) ""
+analysis(dc fields param) "VDD"
+analysis(dc fields designVar) "VDD"
 analysis(dc fields modelParam) ""
 analysis(dc fields mod) ""
 analysis(dc fields deviceParam) ""
 analysis(dc fields dev) ""
-analysis(dc fields sweep) "Temperature"
+analysis(dc fields sweep) "Design Variable"
 analysis(dc fields hysteresis) nil
 analysis(dc fields saveOppoint) t
-analysis(dc fields enable) (nil)
+analysis(dc fields enable) (t)
 analysis(ac options additionalParams) ""
 analysis(ac options stats) ""
 analysis(ac options annotate) "status"
@@ -96,7 +96,7 @@ analysis(ac fields modelParam) ""
 analysis(ac fields mod) ""
 analysis(ac fields deviceParam) ""
 analysis(ac fields dev) ""
-analysis(ac fields enable) (t)
+analysis(ac fields enable) (nil)
 analysis(ac fields sweep) "Frequency"
 analysis(ac fields freq) ""
 analysis(stb fields values) nil
@@ -122,7 +122,7 @@ analysis(stb fields deviceParam) ""
 analysis(stb fields dev) ""
 analysis(stb fields freq) ""
 analysis(stb fields sweep) "Frequency"
-analysis(stb fields enable) (t)
+analysis(stb fields enable) (nil)
 analysis(stb fields probe) "/I0/IPRB0"
 analysis(stb options prevoppoint) ""
 analysis(stb options readns) ""

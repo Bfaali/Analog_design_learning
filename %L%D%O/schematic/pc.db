@@ -3,8 +3,8 @@ smic13mmrf_1233 rhrpo_3t_ckt symbol
 R0
 #
 smic13mmrf_1233 n33 symbol
+M27
 M3
-M2
 M30
 M20
 M19
@@ -13,9 +13,9 @@ M17
 M16
 M28
 M26
-M27
 M7
 M25
+M2
 #
 smic13mmrf_1233 p33 symbol
 M33

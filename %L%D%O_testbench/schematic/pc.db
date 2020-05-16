@@ -1,0 +1,37 @@
+#
+analogLib ipulse symbol
+I8
+#
+analogLib idc symbol
+I7
+#
+analogLib iprobe symbol
+IPRB0
+#
+analogLib vdc symbol
+V4
+V3
+V2
+V1
+V0
+#
+analogLib cap symbol
+C0
+#
+analogLib ind symbol
+L3
+L2
+L1
+L0
+#
+Analog_design_learning LDO symbol
+I0
+#ISCELL
+analogLib gnd symbol
+I9
+I6
+I5
+I4
+I3
+I2
+I1

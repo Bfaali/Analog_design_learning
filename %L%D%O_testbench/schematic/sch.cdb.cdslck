@@ -11,6 +11,6 @@ ProcessCreationTime_UTC        1588650614
 ProcessCreationTime_Readable   Tue May  5 11:50:14 2020 CST
 AppIdentifier                  /home/EDA/IC5141/tools/dfII/bin/icfb.exe
 OSType                         lnx86
-ReasonForPlacingEditLock       XXreopen for A_MODE lock
-FilePathUsedToEditLock         /mnt/hgfs/analogIC/Analog_design_learning/%Bandgap/schematic/sch.cdb
-TimeEditLocked                 Mon May 11 22:04:07 2020 CST
+ReasonForPlacingEditLock       XXsave write lock
+FilePathUsedToEditLock         /mnt/hgfs/analogIC/Analog_design_learning/%L%D%O_testbench/schematic/sch.cdb
+TimeEditLocked                 Sat May 16 14:23:45 2020 CST
