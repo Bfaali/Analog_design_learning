@@ -74,7 +74,7 @@ analysis(noise fields stepTypeLin) "Step Size"
 analysis(noise fields incrType) "Automatic"
 analysis(noise fields span) ""
 analysis(noise fields center) ""
-analysis(noise fields stop) "100G"
+analysis(noise fields stop) "10M"
 analysis(noise fields start) "10"
 analysis(noise fields sweepChange) nil
 analysis(noise fields rangeType) "Start-Stop"
@@ -86,7 +86,7 @@ analysis(noise fields deviceParam) ""
 analysis(noise fields dev) ""
 analysis(noise fields freq) ""
 analysis(noise fields sweep) "Frequency"
-analysis(noise fields enable) (nil)
+analysis(noise fields enable) (t)
 analysis(ac options additionalParams) ""
 analysis(ac options stats) ""
 analysis(ac options annotate) "status"
